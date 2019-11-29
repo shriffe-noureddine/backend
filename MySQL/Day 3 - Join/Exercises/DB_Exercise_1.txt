@@ -1,0 +1,38 @@
+Description du projet : 
+
+	Une société fait appel à nous car elle souhaite avoir accès à certaines informations rapidement et tout le temps.
+
+	La société est composée de plusieurs département : 'inspections', 'post-order', 'communication'.... (au choix)
+	La société posséde plusieurs sièges dans toute la France. Chaque département est donc potentiellement à un endroit différent. Deux départements peuvent être au même endroit.
+
+	Chaque employé de cette société appartient forcément à un (et un seul) département.
+	Chaque employé dépend également d'un "manager". Un "manager" est aussi employé de la société.
+	Chaque employé occupe un poste/job particulier au sein de l'entreprise indépendamment du département.
+	Un poste est décrit par son titre, son salaire minimum et maximum.
+
+
+Partie 1 - Modélisation de la B.D.D. : 
+	- Déterminez les entités (tables) qui découlent de ces données.
+	- Identifiez les relations entre les différentes tables.
+	- Identifiez les cardinalités de ces relations.
+	- Identifiez tous les attributs (pour chaque table).
+	- Créer le diagramme relationnel de la B.D.D.
+
+Partie 2 - Requêtes SQL :
+	(Vous pouvez créer la base du votre SGBD et la remplir de données)
+	- Afficher le nom, le téléphone et le salaire de tous les employés.
+	- Afficher le nom et le salaire de tous les employés ainsi que le salaire minimum et maximum correspondant au job de chaque salarié
+	- Afficher le nom et le salaire de tous les employés ainsi que le salaire moyen correspondant au job de chaque salarié
+	- Afficher tous les salariés qui ont un salaire supérieur au salaire moyen
+	- Afficher tous les employés qui n'ont pas de "manager".
+	- Pour chaque employé, afficher son nom et le département dans lequel il travail.
+	- Pour chaque employé, afficher le titre de son poste et le nom du département dans lequel il travail.
+	- Pour chaque département, afficher le nom du département et son adresse.
+	- Affichers tous les employés qui font plus de 400000 par an (montant du salaire au choix).
+	- Pour chaque département, afficher le nombre de salarié.
+	- Pour chaque siège(adresse), afficher le nombre de salarié.
+	- Pour chaque département, afficher le salaire moyen (de tous les employés).
+	- Pour chaque poste, afficher le nombre de salarié.
+	- Pour chaque poste, afficher le nombre de salarié qui sont plus proche du salaire minimum et ceux qui sont plus proche du salaire maximum.
+	
+	

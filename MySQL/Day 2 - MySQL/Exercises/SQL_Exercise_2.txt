@@ -1,0 +1,77 @@
+-- Explanation :
+
+Now, there is a 'series' table that has the same fields as the 'movies' table.
+
+
+	Series
+	------
+	serie_id, title, year_released, views, director_id
+
+
+-- Queries :
+	- Recover all series and all movies.
+		SELECT title, release_year
+		FROM movies
+		UNION
+		SELECT title, release_year
+		FROM series
+
+	- Collect all series and all movies from 2018
+		SELECT title, year_released
+		FROM movies
+		WHERE LEFT(year_released, 4) = '2018'
+		UNION
+		SELECT title, year_released
+		FROM series
+		WHERE YEAR(year_released) = 2018
+
+		OR
+
+		SELECT table1.*
+		FROM 
+		  (SELECT title, year_released
+		  FROM movies
+		  UNION
+		  SELECT title, year_released
+		  FROM series) table1
+		WHERE YEAR(year_released) = 2018
+
+	- Collect all the series and all the films with the director.
+
+		SAME AS QUERY 1
+
+	- Get the number of views per director (movies and series combined).
+
+		SELECT director_id, SUM(Sum_Views)
+
+		FROM (
+		  SELECT director_id, SUM(views) as Sum_Views                        
+		  FROM movies                                
+		  GROUP BY director_id
+		  UNION
+		  SELECT director_id, SUM(views) as Sum_Views                              
+		  FROM series                                 
+		  GROUP BY director_id) temp_views
+
+		GROUP BY director_id
+
+		------ Prefered solution : ----
+
+		SELECT director_id, SUM(views)
+
+		FROM (
+		  SELECT director_id, views                       
+		  FROM movies
+		  UNION
+		  SELECT director_id, views                            
+		  FROM series) temp_views
+
+		GROUP BY director_id
+
+	- Get the total view number for all movies AND all series (movies and separate series).
+
+		SELECT Concat('Movies : ', SUM(views)) As Origin_Views
+		FROM movies
+		UNION
+		SELECT Concat('Series : ', SUM(views)) As Origin_Views
+		FROM series

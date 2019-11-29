@@ -1,0 +1,16 @@
+For this exercise, you can / must start from the current view base on the Object-Oriented MVC.
+
+- Part 1 :
+
+Add a feature to add comments (or notes, whatever...) to a movie.
+You must be able to add a comment from the description page of the movie.
+
+- Part 2 :
+
+Learn about hydration or how to 'hydrate your objects'.
+
+- Part 3:
+
+Create a class 'Movie'. It will represent a movie, its attributes etc...
+Try to hydrate this Movie class from your MovieModel (or directly from the Model)... !!!
+

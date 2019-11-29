@@ -1,0 +1,19 @@
+- Exercise 1 :
+
+Create a dog / cat / bird factory.
+Each animal has a cry / noise.
+
+Create a program that asks the user if he prefers dogs, cats or birds.
+Depending on what the user responds to, use the factory to dynamically create an object of the correct type and make it do noise.
+
+- Exercise 2 :
+
+We have a client who hold a Pizzeria.
+We need a program that separates the creation of a Pizza and the preparation / ordering of a pizza.
+
+There are several types of pizza: cheese pizza, pepperoni pizza, pizza 4 seasons etc ...
+We have a factory that creates Pizzas.
+We also have our Shop Pizzeria which will allow him to order a pizza.
+The order of a pizza follows this order: we create our pizza, we prepare the pizza, we cook it and put it in a box.
+
+Create a program that asks the customer which pizza he wants to order (you can show him the available choices). The customer will order the pizza at our pizzeria shop.
